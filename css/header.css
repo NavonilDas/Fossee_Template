@@ -7,9 +7,11 @@
 }
 /* Header Of the Website*/
 #header{
+    position: fixed;
+    z-index: 111;
     background-color: #fff;
     width:100vw;
-    height: 80px;
+    height: 70px;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
     color: #fff;
     margin-bottom: 3px;
