@@ -1,0 +1,36 @@
+#flexslider{
+    /* position: relative; */
+    width: 40%;
+    /* top:100vh; */
+}
+#flexslider .flex{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "img title"
+    "thecontent thecontent";
+}
+#flexslider .flex a{
+    grid-area: title;
+}
+#flexslider .flex .thecontent{
+    grid-area: thecontent;
+    background: #fff;
+    border:1px solid gray;
+    padding:10px 10px;
+}
+#flexslider .flex .thecontent::before{
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    margin-top:-18px;
+    content: " ";
+    display: block;
+    height: 16px;
+    left: 60px;
+    position: absolute;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 16px;
+}

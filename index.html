@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/theflex.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|IM+Fell+English+SC|Roboto+Mono|Source+Sans+Pro:600" rel="stylesheet">
-
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
     <div id="sideNavBar">
         <!-- Button to close the side Navigation Bar-->
-        <label onclick="closeBar()">&times;</label>
+        <label onclick="closeBar()">&lsaquo;</label>
         <ul>
             <li>
                 <a href="#">Home</a>
@@ -88,15 +88,25 @@
     </div>
 
     <h1 class="ribbon">
-        <strong class="ribbon-content">Everybody loves ribbons</strong>
+        <strong class="ribbon-content">Everybody Hates ribbons</strong>
     </h1>
 
 
 
     <div id="news"></div>
 
-    <div id="flexslider"></div>
-
+    <div id="flexslider">
+        <div class="flex">
+            <img src="/images/logo/logo_icon_1.png" style="grid-area:img">
+            <a href="">Scilab Toolboxes</a>
+            <div class="thecontent">FOSSEE has taken efforts to raise the level of Scilab toolboxes. Following are some of the toolboxes we are working on: Image processing toolbox, Signal processing toolbox, Communication toolbox, Optimization toolbox, Identification toolbox, Control systems toolbox, Scilab to C toolbox.</div>
+        </div>
+        <!-- <div class="flex">
+            <img src="" style="grid-area:img">
+            <a href=""></a>
+            <div class="thecontent"></div>
+        </div> -->
+    </div>
 
     <h2 class="heading">Projects</h2>
 
@@ -246,7 +256,7 @@
         }
         function closeBar() {
             navbar_showing = true;
-             showNavBar();
+            showNavBar();
         }
     </script>
 
