@@ -46,7 +46,7 @@
 
     <div id="sideNavBar">
         <!-- Button to close the side Navigation Bar-->
-        <label onclick="closeBar()">&times;</label>
+        <label onclick="closeBar()">&lsaquo;</label>
         <ul>
             <li>
                 <a href="#">Home</a>
@@ -107,8 +107,8 @@
                     <img src="images/icons/scilab.png" alt="">
                 </div>
                 <div class="back">
-                    Scilab is a free and open source software for numerical computation developed by Scilab Enterprises, France. Scilab also
-                    includes Xcos which is an open source alternative to Simulink.
+                    <p>Scilab is a free and open source software for numerical computation developed by Scilab Enterprises, France. Scilab also
+                    includes Xcos which is an open source alternative to Simulink.</p>
                 </div>
             </div>
         </div>
@@ -219,9 +219,9 @@
 
     <div id="activites">
         <h2 class="heading">Activites</h2>
-        The FOSSEE Project promotes the use of the following FOSS tools to improve the quality of education and research: We promote
+        <p>The FOSSEE Project promotes the use of the following FOSS tools to improve the quality of education and research: We promote
         these tools by encouraging students and faculty to use them in education and research through the activities listed
-        in this page.
+        in this page.</p>
 
     </div>
 
@@ -240,7 +240,7 @@
             }
             else {
                 document.querySelector("#sideNavBar ul").style.visibility = "hidden";
-                document.getElementById("sideNavBar").style.width = "0"; // set the width to 0        
+                document.getElementById("sideNavBar").style.width = "0"; // set the width to 0
             }
             navbar_showing = !navbar_showing; // change the toggle
         }
