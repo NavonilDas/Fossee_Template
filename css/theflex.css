@@ -1,6 +1,8 @@
 #flexslider{
     /* position: relative; */
-    width: 40%;
+    width: 42%;
+    margin-top: 5em;
+    margin-left: 3em;
     /* top:100vh; */
 }
 #flexslider .flex{
@@ -11,6 +13,7 @@
 }
 #flexslider .flex a{
     grid-area: title;
+    margin-top: 1.5em;
 }
 #flexslider .flex .thecontent{
     grid-area: thecontent;
