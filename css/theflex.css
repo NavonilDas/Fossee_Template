@@ -5,16 +5,25 @@
 }
 #flexslider .flex{
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "img title"
     "thecontent thecontent";
 }
+#flexslider .flex .theicon{
+    grid-area: img;
+    width: 100%;
+    background-color: #fff;
+}
 #flexslider .flex a{
     grid-area: title;
+    background: #fff;
+    text-decoration: none;
 }
 #flexslider .flex .thecontent{
     grid-area: thecontent;
     background: #fff;
+    font-size: 1.2em;
+    margin-top:1em;
     border:1px solid gray;
     padding:10px 10px;
 }
@@ -23,7 +32,7 @@
     border: 1px solid transparent;
     border-top: 1px solid gray;
     border-left: 1px solid gray;
-    margin-top:-18px;
+    margin-top:-20px;
     content: " ";
     display: block;
     height: 16px;
