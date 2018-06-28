@@ -20,9 +20,7 @@
 #mainMenu{
     height: 100%;
     float: left;
-    background-color: #343a40;
-    width:calc(100% - 180px);
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-family: 'Lato',sans-serif;
     font-style: normal;
 }
@@ -33,7 +31,7 @@
 #mainMenu ul li a{
     text-decoration: none;
     font-weight: lighter;
-    color: #fff;
+    color: #000;
     padding:5px;
     position: relative;
     top:20px;
@@ -55,6 +53,7 @@
     padding-left: 10px;
     padding-bottom: 5px;
     color:#000;
+    z-index:112;
     font-size: 24px;
     cursor: pointer;
 }
@@ -148,6 +147,7 @@
     height: 200px;
     margin-bottom: -7vw;
     padding-top: 6vw;
+    padding-bottom: 7vw;
     clip-path: polygon(0% 5vw, 100% 0, 100% 100%, 0% 100%);
     z-index: 99;
 }

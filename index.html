@@ -39,6 +39,9 @@
                 </li>
             </ul>
         </div>
+        <label for="" id="toggle" onclick="showNavBar()">
+            &#9776;
+        </label>
     </div>
 
     <div id="sideNavBar">
@@ -66,12 +69,21 @@
         </ul>
     </div>
 
+
     <div id="anim">
         <ul class="cb-slideshow">
-            <li><span>Image 01</span></li>
-            <li><span>Image 02</span></li>
-            <li><span>Image 03</span></li>
-            <li><span>Image 04</span></li>
+            <li>
+                <span>Image 01</span>
+            </li>
+            <li>
+                <span>Image 02</span>
+            </li>
+            <li>
+                <span>Image 03</span>
+            </li>
+            <li>
+                <span>Image 04</span>
+            </li>
         </ul>
     </div>
 
@@ -218,6 +230,16 @@
     </div>
 
     <script>
+        var navbar_showing = false; // check if the nav bar showing
+        function showNavBar() {
+            if (!navbar_showing) {
+                document.getElementById("sideNavBar").style.width = "250px"; // set the width to 250px
+            }
+            else
+                document.getElementById("sideNavBar").style.width = "0"; // set the width to 0        
+            navbar_showing = !navbar_showing; // change the toggle
+        }
+
     </script>
 
     <!-- <script>
