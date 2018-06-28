@@ -26,6 +26,10 @@
     font-family: 'Lato',sans-serif;
     font-style: normal;
 }
+#mainMenu ul{
+  margin-left: 0.5em;
+  margin-top: -0.3em;
+}
 /* The Top Menu */
 #mainMenu ul li{
     display: inline;
@@ -41,7 +45,7 @@
     border-radius:8px;
 }
 #mainMenu ul li a:first{
-    margin-left: 10px;    
+    margin-left: 10px;
 }
 #mainMenu ul li a:hover{
     background: orangered;
