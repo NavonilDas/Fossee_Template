@@ -7,6 +7,8 @@ body{
 }
 .heading{
     font-size: 3em;
+    margin: 1em 0em 1em 1em;
+    font-family: 'Lato', sans-serif;
 }
 #projects{
     background: #fff;
@@ -43,6 +45,10 @@ body{
     width: 363px;
     height: 261px;
 }
+
+.back{
+  font-family: 'Roboto Mono', monospace;
+}
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
@@ -65,7 +71,7 @@ body{
 }
 .back {
     transform: rotateX(-180deg);
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -100,6 +106,7 @@ body{
     text-align: center;
     padding: 1em 2em; /* Adjust to suit */
     margin-bottom: 1.5em;
+    margin-left: 1em;
    }
    .ribbon::before, .ribbon::after {
     content: "";
