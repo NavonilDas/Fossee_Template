@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.heading{
+    font-size: 3em;
+}
+#projects{
+    background: #fff;
+    display: grid;
+    width: 100%;
+    padding :10px;
+    padding-bottom: 30px;
+    margin-bottom: -5vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-areas: "e0 e1 e2 e3"
+    "e4 e5 e6 e7"
+    "e8 e9 e10 e11"
+    "e12 . . ."; */
+    grid-template-areas: "e0 e1 e2"
+    "e3 e4 e5"
+    "e6 e7 e8"
+    "e9 e10 e11"
+    "e12 . ."
+    ;
+    grid-gap: 20px 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.flip-container {
+    perspective: 1000px;
+    border-radius: 7px;
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateX(180deg);
+	}
+
+.flip-container, .front, .back {
+    width: 363px;
+    height: 261px;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    position: relative;
+    transform-origin: 100% 130.5px;
+}
+.front, .back {
+	backface-visibility: hidden;
+    position: absolute;
+    border-radius: 7px;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+    transform: rotateX(0deg);
+}
+.front img{
+    width: 100%;
+}
+.back {
+    transform: rotateX(-180deg);
+    font-size: 1.5em;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: greenyellow;
+}
+
+@media only screen and (max-width: 1000px) {
+    #projects{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "e0 e1"
+        "e2 e3"
+        "e4 e5"
+        "e6 e7"
+        "e8 e9"
+        "e10 e11"
+        "e12 .";
+    }
+    .back{
+        padding-left:10px;
+        padding-right: 10px;
+    }
+}
+
+.ribbon {
+    font-size: 2em !important;
+    width: 70%;
+    position: absolute;
+    bottom: 0px;
+    left:calc(15% - 96px);
+    background: rgb(255, 165, 0);
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em; /* Adjust to suit */
+    margin-bottom: 1.5em;
+   }
+   .ribbon::before, .ribbon::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid rgb(224, 149, 10);
+    z-index: -1;
+   }
+   .ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+   }
+   .ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+   }
+   .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: rgb(179, 119, 8) transparent transparent transparent;
+    bottom: -1em;
+   }
+   .ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+   }
+   .ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+   }
