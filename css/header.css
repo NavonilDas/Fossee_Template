@@ -74,8 +74,8 @@
     background:rgba(0,0,0,0.95);
     top:0px;
     left:0px;
-    z-index: 100;
-    transition: 0.5s;
+    z-index: 114;
+    transition: width 0.5s ease;
     height:100vh;
 }
 #sideNavBar label{
@@ -91,9 +91,10 @@
 #sideNavBar ul{
     position: relative;
     top:100px;
+    visibility: hidden;
 }
 #sideNavBar ul li{
-    width:250px;
+    width:75%;
 }
 #sideNavBar ul li a{
     text-decoration:none;
@@ -101,7 +102,6 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
 }
 #sideNavBar ul li a:hover{
     color: #f1f1f1;
