@@ -107,8 +107,8 @@
                     <img src="images/icons/scilab.png" alt="">
                 </div>
                 <div class="back">
-                    <p>Scilab is a free and open source software for numerical computation developed by Scilab Enterprises, France. Scilab also
-                    includes Xcos which is an open source alternative to Simulink.</p>
+                    Scilab is a free and open source software for numerical computation developed by Scilab Enterprises, France. Scilab also
+                    includes Xcos which is an open source alternative to Simulink.
                 </div>
             </div>
         </div>
@@ -233,13 +233,26 @@
         var navbar_showing = false; // check if the nav bar showing
         function showNavBar() {
             if (!navbar_showing) {
-                document.getElementById("sideNavBar").style.width = "250px"; // set the width to 250px
+                document.getElementById("sideNavBar").style.width = "75%"; // set the width to 250px
+                setTimeout(function () {
+                    document.querySelector("#sideNavBar ul").style.visibility = "visible";
+                }, 400);
             }
+<<<<<<< HEAD
             else
                 document.getElementById("sideNavBar").style.width = "0"; // set the width to 0
+=======
+            else {
+                document.querySelector("#sideNavBar ul").style.visibility = "hidden";
+                document.getElementById("sideNavBar").style.width = "0"; // set the width to 0        
+            }
+>>>>>>> 510a39a27c6f159d248700dfcd393bbe60d4f65c
             navbar_showing = !navbar_showing; // change the toggle
         }
-
+        function closeBar() {
+            navbar_showing = true;
+             showNavBar();
+        }
     </script>
 
     <!-- <script>
