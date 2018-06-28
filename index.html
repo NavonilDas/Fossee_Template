@@ -46,7 +46,7 @@
 
     <div id="sideNavBar">
         <!-- Button to close the side Navigation Bar-->
-        <label onclick="closeBar()">&lsaquo;</label>
+        <label onclick="closeBar()">&times;</label>
         <ul>
             <li>
                 <a href="#">Home</a>
@@ -238,15 +238,10 @@
                     document.querySelector("#sideNavBar ul").style.visibility = "visible";
                 }, 400);
             }
-<<<<<<< HEAD
-            else
-                document.getElementById("sideNavBar").style.width = "0"; // set the width to 0
-=======
             else {
                 document.querySelector("#sideNavBar ul").style.visibility = "hidden";
                 document.getElementById("sideNavBar").style.width = "0"; // set the width to 0        
             }
->>>>>>> 510a39a27c6f159d248700dfcd393bbe60d4f65c
             navbar_showing = !navbar_showing; // change the toggle
         }
         function closeBar() {
