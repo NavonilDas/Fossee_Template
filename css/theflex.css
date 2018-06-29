@@ -18,17 +18,21 @@
 }
 #flexslider .flex a{
     grid-area: title;
-    margin-top: 1.5em;
+    margin-top: 0.7em;
+    margin-left: 0.2em;
     background: #fff;
     text-decoration: none;
+    color: #000000;
+    font-size: 1.5em;
 }
 #flexslider .flex .thecontent{
     grid-area: thecontent;
     background: #fff;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top:1em;
     border:1px solid gray;
     padding:10px 10px;
+    font-family: 'Lato', sans-serif;
 }
 #flexslider .flex .thecontent::before{
     background-color: #fff;
