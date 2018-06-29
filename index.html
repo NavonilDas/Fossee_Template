@@ -94,7 +94,7 @@
     </h1>
 
 
-
+  <div id="special-area">
     <div id="news">
         <div class="tabs">
             <ul>
@@ -102,16 +102,27 @@
                 <li><p>Policy</p></li>
             </ul>
         </div>
-        <div class="newscontent"></div>
+        <div class="newscontent">
+          <table>
+            <tbody>
+              <tr><td>1</td><td>Project FOSSEE listed under 'resources for students' on the AICTE website.</td>
+              <td><a href="https://www.aicte-india.org/opportunities/students/resources_students" target="_blank">View Here</a></td>
+              </tr><tr><td>2</td><td>Project FOSSEE listed under 'resources for faculty' on the AICTE website.</td>
+              <td><a href="https://www.aicte-india.org/opportunities/faculty/resources_faculty" target="_blank">View Here</a></td>
+              </tr><tr><td>3</td><td>Scilab Lecture session held on Oct. 12, 2017</td>
+              <td><a href="https://www.youtube.com/watch?v=7dRw8H1ro9Y" target="_blank">View Here</a></td></tr>
+            </tbody>
+          </table>
+          <a href="https://fossee.in/media-article" class="btn" style="float: right;">View All</a>
+        </div>
+        <div class="policycontent">
+
+        </div>
     </div>
 
     <div id="flexslider">
         <div class="flex">
-<<<<<<< HEAD
             <img class="theicon" src="./images/logo/logo_icon_1.png">
-=======
-            <img src="./images/logo/logo_icon_1.png" class="theicon">
->>>>>>> 5ccbd974d7155de7f78103f1d39afaf96e133a2f
             <a href="">Scilab Toolboxes</a>
             <div class="thebutton">
                 <div>
@@ -178,6 +189,8 @@
 
     </div>
 
+  </div>
+
     <script>
         var slideIndex = 0;
         carousel();
@@ -185,7 +198,7 @@
         function carousel() {
             var i;
             var x = document.getElementsByClassName("flex");
-            // console.log(x);            
+            // console.log(x);
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
@@ -317,11 +330,115 @@
     </div>
 
     <div id="activites">
-        <h2 class="heading">Activites</h2>
+        <h2 class="activites-head">Activites</h2>
         <p>The FOSSEE Project promotes the use of the following FOSS tools to improve the quality of education and research:
             We promote these tools by encouraging students and faculty to use them in education and research through the
             activities listed in this page.</p>
+            <div id="act-content">
+              <ul class="act-tabs">
+                <li class="active">
+                  <a href="#a" data-toggle="tab">        <center>  <img class="img" src="images/activities/act_05a.png" alt=""><br> Textbook Companion</center></a></li>
+                <li><a href="#b" data-toggle="tab">     <center>  <img class="img" src="images/activities/act_04a.png" alt=""><br> Lab Migration</center></a></li>
+                <li><a href="#c" data-toggle="tab">     <center>  <img class="img" src="images/activities/act_02a.png" alt=""><br> SELF Workshops </center></a></li>
+                <li><a href="#d" data-toggle="tab">     <center>  <img class="img" src="images/activities/act_01a.png" alt=""> <br> Forum </center></a></li>
+                <li><a href="#e" data-toggle="tab">     <center>  <img class="img" src="images/activities/act_03a.png" alt=""> <br> Workshops &amp;Conferences </center></a></li>
+              </ul>
+              <div class="tab-content">
+               <div class="tab-pane active" id="a"><br>
+                 <h3>Textbook Companion</h3>
+                 <p>The Textbook Companion (TBC) activity aims to port solved examples from standard
+      textbooks using a Free and Open source software.<p>
+                   <h4>Objectives:</h4>
+      <ol>
+      <li>Make individuals learn FOSS through a practical approach.</li>
+      <li>Provide a huge database of Textbook Companions as a learning resource.</li>
+      <li>To make it easy for users of such textbooks to start using FOSS.</li>
+      <li>To improve the documentation available for FOSS.</li>
+      </ol>
+      <h4>This internship is available for the following FOSS supported by FOSSEE: </h4>
+      <table class="table table-bordered" style="width:80%">
+              <tbody>
+                  <tr class="active">
+                      <td><a href="https://www.scilab.in/Textbook_Companion_Project" target="_blank"><i class="fa fa-eye" style="float:right"></i>Scilab
+      </a></td>
 
+                  </tr>
+                  <tr class="success">
+                      <td><a href="https://python.fossee.in/textbook-companion-project/" target="_blank"><i class="fa fa-eye" style="float:right"></i>Python
+      </a></td>
+
+                  </tr>
+                  <tr class="info">
+                 <td><a href="https://esim.fossee.in/textbook-companion-project" target="_blank"><i class="fa fa-eye" style="float:right"></i>eSim
+      </a></td>
+
+                  </tr>
+                  <tr class="warning">
+                   <td><a href="https://cfd.fossee.in/textbook-companion-project" target="_blank"><i class="fa fa-eye" style="float:right"></i>OpenFOAM
+      </a></td>
+
+                  </tr>
+          <tr class="active">
+                      <td width="50%"><a href="https://or.fossee.in/textbook-companion" target="_blank"><i class="fa fa-eye" style="float:right"></i>OR-Tools
+      </a></td>
+
+                  </tr>
+                  <tr class="success">
+                      <td><a href="https://dwsim.fossee.in/textbook-companion-project" target="_blank"><i class="fa fa-eye" style="float:right"></i>DWSIM
+      </a></td>
+
+                  </tr>
+
+              </tbody>
+          </table>
+      </div>
+               <div class="tab-pane" id="b"><br><h3>Lab Migration</h3><p>Lab Migration aims to migrate labs that use proprietary software to a Free and
+      Open Source Software (FOSS) only lab. Colleges can save a large amount of money
+      that is spent on procuring licenses for commercial software by switching to FOSS.</p>
+      <h4>Objectives:</h4>
+      <ol>
+      <li>Provide suggestions on the different ways FOSS can be implemented in the laboratory.</li>
+      <li>Coordinate the migration of the lab to a FOSS only laboratory.</li>
+
+      <li>Provide solutions to the lab's problem statements.</li>
+      </ol>
+      <h4>We currently offer Lab Migration for the following FOSS:</h4>
+      <table class="table table-bordered" style="width:80%">
+              <tbody>
+                  <tr class="active">
+                      <td><a href="https://scilab.in/Lab_Migration_Project" target="_blank"><i class="fa fa-eye" style="float:right"></i>Scilab
+      </a></td>
+
+                  </tr>
+
+                  <tr class="info">
+                 <td><a href="https://esim.fossee.in/lab-migration-project" target="_blank"><i class="fa fa-eye" style="float:right"></i>eSim
+      </a></td>
+
+                  </tr>
+                  <tr class="warning">
+                   <td><a href="https://cfd.fossee.in/lab-migration-project" target="_blank"><i class="fa fa-eye" style="float:right"></i>OpenFOAM
+      </a></td>
+
+                  </tr>
+
+
+              </tbody>
+          </table>
+      </div>
+               <div class="tab-pane" id="c"><br><h3>SELF Workshops</h3><p>SELF Workshops can be held at your institute with the use of ST.  We help develop the ST for the FOSS tools we promote. The Spoken Tutorial project is about teaching and learning a particular FOSS (Free and Open Source Software)
+      The Spoken Tutorial project is an initiative of the "Talk to a Teacher" project under the National Mission on Education through Information and Communication Technology, launched by MHRD, Govt of India.</p><link>
+       </div>
+       <div class="tab-pane" id="d"><br><h3>Forum</h3><p>For assistance in installation and use of the Free and Open Source Software, we recommend you to visit the <a href="https://forums.fossee.in/" target="_blank">FOSSEE Forum</a> to post your queries. This forum is monitored by domain experts who would attend to your queries.
+
+      Note: Before posting your questions, you are requested to go through the list of questions already answered. There could be similar queries with solutions already provided.</p>
+
+       </div>
+       <div class="tab-pane" id="e"><br><h3>Workshops &amp; Conferences</h3>We conduct various conferences, seminars, hands-on workshops to introduce FOSS users to various developments in the respective FOSS.Through these events, we also aim to evangelize the tool among new users.
+
+       </div>
+              </div>
+          </div>
     </div>
 
     <div id="footer">

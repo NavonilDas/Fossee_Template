@@ -141,18 +141,6 @@
     }
 }
 
-#activites{
-    position: relative;
-    background-color: orange;
-    color:#fff;
-    font-size: 1.2em;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-
-    z-index: 99;
-}
-
 #toggle{
   margin-top: 0.5em;
   margin-right: 0.4em;
