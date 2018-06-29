@@ -1,19 +1,54 @@
+i.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
 #flexslider{
     /* position: relative; */
-    width: 42%;
+    width: 45%;
     margin-top: 5em;
     margin-left: 3em;
     /* top:100vh; */
 }
 #flexslider .flex{
     display: grid;
+    grid-template-columns: 180px 1fr 70px;
+    grid-template-rows: 100px 120px;
+    grid-template-areas: "img title thebutton"
+    "thecontent thecontent thecontent";
+}
+#flexslider .flex .thebutton{
+    grid-area: thebutton;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img title"
-    "thecontent thecontent";
+}
+#flexslider .flex .thebutton div{
+    width: 30px;
+    height: 30px;
+    background: rgb(21, 127, 248);
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+}
+#flexslider .flex .thebutton div:hover{
+    background:  rgb(12, 110, 221);
+}
+#flexslider .flex .thebutton div i{
+    margin: auto auto;
 }
 #flexslider .flex .theicon{
     grid-area: img;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100px;
     background-color: #fff;
 }
 #flexslider .flex a{
@@ -30,20 +65,21 @@
     background: #fff;
     font-size: 1em;
     margin-top:1em;
-    border:1px solid gray;
+    min-height: 120px;
+    border:1px solid rgb(185, 185, 185);
     padding:10px 10px;
     font-family: 'Lato', sans-serif;
 }
 #flexslider .flex .thecontent::before{
     background-color: #fff;
     border: 1px solid transparent;
-    border-top: 1px solid gray;
-    border-left: 1px solid gray;
+    border-top: 1px solid rgb(185, 185, 185);
+    border-left: 1px solid rgb(185, 185, 185);
     margin-top:-20px;
+    margin-left: 60px;
     content: " ";
     display: block;
     height: 16px;
-    left: 60px;
     position: absolute;
     transform: rotate(45deg);
     -moz-transform: rotate(45deg);
