@@ -13,18 +13,22 @@ i.arrow {
     -webkit-transform: rotate(135deg);
 }
 #flexslider{
-    /* position: relative; */
-    width: 45%;
+    width: 40%;
+    height: 320px;
     margin-right: 3em;
     margin-left: 0.5em;
-    /* top:100vh; */
 }
 #flexslider .flex{
+    width: 40%;
     display: grid;
     grid-template-columns: 180px 1fr 70px;
     grid-template-rows: 100px 120px;
     grid-template-areas: "img title thebutton"
     "thecontent thecontent thecontent";
+    background-color: #fff;
+    visibility: visible;
+    transition: margin 5s ease,opacity 0.5s ease;
+    position: absolute;
 }
 #flexslider .flex .thebutton{
     grid-area: thebutton;
@@ -76,7 +80,7 @@ i.arrow {
     border-top: 1px solid rgb(185, 185, 185);
     border-left: 1px solid rgb(185, 185, 185);
     margin-top:-20px;
-    margin-left: 60px;
+    margin-left: 40px;
     content: " ";
     display: block;
     height: 16px;
@@ -85,4 +89,15 @@ i.arrow {
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     width: 16px;
+}
+
+@media screen and (max-width:900px){
+    #flexslider{
+        margin-top: 3em;
+        width:90%;
+        margin-left: 1em;
+    }
+    #flexslider .flex{
+        width:90%;
+    }
 }

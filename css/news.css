@@ -1,9 +1,17 @@
 #news{
     border: 1px solid rgb(185, 185, 185);
-    width: 45%;
+    width: 43%;
     min-height: 200px;
     margin-left: 3em;
     margin-right: 0.5em;
+}
+
+@media screen and (max-width:900px){
+  #news{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 #news ul{
@@ -26,7 +34,9 @@
   color:#4c7099;
   background: #d6caca;
 }
-
+#news .newscontent{
+  padding: 0 0.5em 0 0.5em;
+}
 .newscontent table tr a{
   color: #e3560a;
   text-decoration: none;
