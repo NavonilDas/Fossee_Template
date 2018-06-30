@@ -48,7 +48,6 @@
     </div>
 
     <div id="sideNavBar">
-        <!-- Button to close the side Navigation Bar-->
         <label onclick="closeBar()">&lsaquo;</label>
         <ul>
             <li>
@@ -99,10 +98,10 @@
         <div id="news">
             <div class="tabs">
                 <ul>
-                    <li>
+                    <li onclick="changeNews(1)">
                         <p>News</p>
                     </li>
-                    <li>
+                    <li onclick="changeNews(2)">
                         <p>Policy</p>
                     </li>
                 </ul>
@@ -135,8 +134,8 @@
                 </table>
                 <a href="https://fossee.in/media-article" class="btn" style="float: right;">View All</a>
             </div>
-            <div class="policycontent">
-
+            <div class="policycontent" style="display:none;">
+                prpprprp
             </div>
         </div>
 
@@ -173,7 +172,7 @@
                 <div class="thecontent">In order to allow anyone to easily view, modify, and run the Python textbook companions, the FOSSEE team
                     has made these available online. This is done by using IPython notebooks that are hosted on our server
                     at https://tbc-python.fossee.in. This environment allows viewers to use the examples with just a browser.
-                    </div>
+                </div>
             </div>
 
             <div class="flex">
@@ -216,9 +215,9 @@
         var slideIndex = 0;
         var flex_stop_anim = false;
         // carousel();
-        setInterval(carousel,7000);
+        setInterval(carousel, 7000);
         function carousel() {
-            if(!flex_stop_anim){
+            if (!flex_stop_anim) {
                 var i;
                 var x = document.getElementsByClassName("flex");
                 for (i = 0; i < x.length; i++) {
@@ -226,10 +225,10 @@
                 }
                 slideIndex++;
                 if (slideIndex > x.length) { slideIndex = 1 }
-                    x[slideIndex - 1].style = "margin-right:0;margin-left:0;visibility:visible;opacity:1;";
+                x[slideIndex - 1].style = "margin-right:0;margin-left:0;visibility:visible;opacity:1;";
             }
         }
-        function NextFlex(){
+        function NextFlex() {
             var i;
             var x = document.getElementsByClassName("flex");
             for (i = 0; i < x.length; i++) {
@@ -237,26 +236,35 @@
             }
             slideIndex++;
             if (slideIndex > x.length) { slideIndex = 1 }
-                x[slideIndex - 1].style = "margin-right:0;margin-left:0;visibility:visible;opacity:1;";
+            x[slideIndex - 1].style = "margin-right:0;margin-left:0;visibility:visible;opacity:1;";
         }
-        function changeActivities(el,n){
+        function changeActivities(el, n) {
             var e;
-            document.getElementById('a').style = "display:none;";            
+            document.getElementById('a').style = "display:none;";
             document.getElementById('b').style = "display:none;";
             document.getElementById('c').style = "display:none;";
             document.getElementById('d').style = "display:none;";
             document.getElementById('e').style = "display:none;";
             var rev = document.querySelectorAll('.act-tabs li');
-            rev.forEach(function(val,ar){
+            rev.forEach(function (val, ar) {
                 val.classList.remove('active');
             });
             el.classList.add('active');
-            if(n == 1) e = 'a';
-            if(n == 2) e = 'b';
-            if(n == 3) e = 'c';
-            if(n == 4) e = 'd';
-            if(n == 5) e = 'e';
+            if (n == 1) e = 'a';
+            if (n == 2) e = 'b';
+            if (n == 3) e = 'c';
+            if (n == 4) e = 'd';
+            if (n == 5) e = 'e';
             document.getElementById(e).style = "display:block;";
+        }
+        function changeNews(n) {
+            if (n == 1) {
+                document.getElementsByClassName("newscontent")[0].style = "display:block";
+                document.getElementsByClassName("policycontent")[0].style = "display:none";
+            } else {
+                document.getElementsByClassName("newscontent")[0].style = "display:none";
+                document.getElementsByClassName("policycontent")[0].style = "display:block";
+            }
         }
     </script>
 
@@ -388,33 +396,33 @@
         <div id="act-content">
             <ul class="act-tabs">
                 <li class="active" onclick="changeActivities(this,1)">
-                        <center>
-                            <img class="img" src="images/activities/act_05a.png" alt="">
-                            <br> Textbook Companion</center>
+                    <center>
+                        <img class="img" src="images/activities/act_05a.png" alt="">
+                        <br> Textbook Companion</center>
                 </li>
 
                 <li onclick="changeActivities(this,2)">
-                        <center>
-                            <img class="img" src="images/activities/act_04a.png" alt="">
-                            <br> Lab Migration</center>
+                    <center>
+                        <img class="img" src="images/activities/act_04a.png" alt="">
+                        <br> Lab Migration</center>
                 </li>
 
-                <li  onclick="changeActivities(this,3)">
-                        <center>
-                            <img class="img" src="images/activities/act_02a.png" alt="">
-                            <br> SELF Workshops </center>
+                <li onclick="changeActivities(this,3)">
+                    <center>
+                        <img class="img" src="images/activities/act_02a.png" alt="">
+                        <br> SELF Workshops </center>
                 </li>
 
-                <li  onclick="changeActivities(this,4)">
-                        <center>
-                            <img class="img" src="images/activities/act_01a.png" alt="">
-                            <br> Forum </center>
+                <li onclick="changeActivities(this,4)">
+                    <center>
+                        <img class="img" src="images/activities/act_01a.png" alt="">
+                        <br> Forum </center>
                 </li>
 
-                <li  onclick="changeActivities(this,5)">
-                        <center>
-                            <img class="img" src="images/activities/act_03a.png" alt="">
-                            <br> Workshops &amp; Conferences </center>
+                <li onclick="changeActivities(this,5)">
+                    <center>
+                        <img class="img" src="images/activities/act_03a.png" alt="">
+                        <br> Workshops &amp; Conferences </center>
                 </li>
             </ul>
 
@@ -561,16 +569,77 @@
     </div>
 
     <div id="footer">
-        <p>This work is licensed under a
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-                <i class="fa fa-cc" style="font-size: 3em;"></i>
-            </a>
-        </p>
+
+        <div id="poster" style="grid-area: poster;">
+            <h2>Poster</h2>
+            <img src="./images/portfolios/poster.png" alt="">
+        </div>
+        <div id="brochure" style="grid-area: bro;">
+            <h2>Brochure</h2>
+            <img src="./images/portfolios/Fossee_Flyer.png" alt="">
+        </div>
+        <div id="contacts" style="grid-area: contacts;">
+            <h2>Contacts</h2>
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa fa-home pr-10"></i>
+                    </td>
+                    <td>
+                        <p>FOSSEE, IIT Bombay</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-globe pr-10"></i>
+                    </td>
+                    <td>
+                        <p>Mumbai, India</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-phone pr-10"></i>
+                    </td>
+                    <td>
+                        <p>Phone : (+91) 22 25764133 </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa fa-envelope pr-10"></i>
+                    </td>
+                    <td>
+                        <p>Email : info [at] fossee [dot] in</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="mhrd" style="grid-area: mhrd;">
+            <h2>MHRD</h2>
+            <p>Govt of India.</p>
+            <img src="./images/iitb.png" alt="">
+        </div>
+        <div id="cc" style="grid-area: cc;">
+            <p>This work is licensed under a
+                <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                    Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                    <i class="fa fa-cc" style="font-size: 3em;"></i>
+                </a>
+            </p>
+        </div>
+        <div id="icons">
+            <div><i class="fa fa-signal"></i></div>
+            <div><i class="fa fa-facebook"></i></div>
+            <div><i class="fa fa-twitter"></i></div>
+            <div><i class="fa fa-youtube"></i></div>
+            <div><i class="fa fa-github"></i></div>
+        </div>
     </div>
 
     <script>
-        var navbar_showing = false; // check if the nav bar showing
+        var navbar_showing = false;
         function showNavBar() {
             if (!navbar_showing) {
                 document.getElementById("sideNavBar").style.width = "75%"; // set the width to 250px
@@ -582,7 +651,7 @@
                 document.querySelector("#sideNavBar ul").style.visibility = "hidden";
                 document.getElementById("sideNavBar").style.width = "0"; // set the width to 0
             }
-            navbar_showing = !navbar_showing; // change the toggle
+            navbar_showing = !navbar_showing;
         }
         function closeBar() {
             navbar_showing = true;
