@@ -14,21 +14,18 @@ body{
 #projects{
     background: #fff;
     display: grid;
-    width: 100%;
+    width: 76%;
     padding :10px;
     padding-bottom: 30px;
+    margin-left: 12%;
+    margin-right: 12%;
     margin-bottom: -5vw;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-areas: "e0 e1 e2 e3"
-    "e4 e5 e6 e7"
-    "e8 e9 e10 e11"
-    "e12 . . ."; */
     grid-template-areas: "e0 e1 e2"
     "e3 e4 e5"
     "e6 e7 e8"
     "e9 e10 e11"
-    "e12 . ."
-    ;
+    "e12 . .";
     grid-gap: 20px 20px;
     align-items: center;
     justify-items: center;
@@ -271,4 +268,26 @@ body{
     margin-left: 6vw;
     margin-top:auto;
     animation: slideText 5s ease infinite;
+}
+#poster img{
+    max-width: 200px;
+    max-height: 266px;
+    width:100%;
+}
+
+#contacts table tr td:nth-child(1){
+    width:50px;
+}
+#contacts table tr td:nth-child(2){
+    text-align: left;
+    width:200px;
+}
+
+@media screen and (max-width:850px){
+    #brochure{
+        display: none;
+    }
+    #poster{
+        display:none;
+    }
 }

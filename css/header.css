@@ -112,9 +112,8 @@
 /* Footer Section */
 #footer{
     position: relative;
-    bottom:0px;
+    bottom:0;
     width:100%;
-    /* background: #0080C0; */
     background: linear-gradient(to right, #4c7099 0%,#e0701a 100%);
     clear: both;
     min-height: 300px;
@@ -135,6 +134,14 @@
     font-size:18px;
 }
 
+@media screen and (max-width:850px){
+    #footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contacts mhrd"
+        "cc cc icons icons";
+    }
+}
+
 @media screen and (max-width:875px){
     #mainMenu{
         display: none;
@@ -149,10 +156,6 @@
   margin-right: 0.4em;
   padding-top: 0.2em;
   border-radius: 0.5em;
-}
-
-#footer h2{
-    color:#fff;
 }
 
 #footer #icons{
@@ -173,4 +176,9 @@
 }
 #footer #icons div:hover{
     background: orangered;
+}
+#footer h2{
+    color:#fff;
+    text-align: left;
+    padding-left: 0.5em;
 }

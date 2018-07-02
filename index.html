@@ -216,7 +216,6 @@
         var text_index = 0;
         setInterval(function () {
             var el =  document.querySelector('#sidediv p');
-            // el.style = "animation-name:none;";
             var ar = [
                 "To increase the use of open source software in the curriculum and research",
                 "To promote open source software and hardware",
@@ -224,7 +223,6 @@
                 "To Develop new open source software where required"
             ];
            el.innerText = ar[text_index]+'.';
-        //    el.style="animation:slideText 3s ease;";
             text_index++;
             if(text_index > 3) text_index = 0;
         }, 5000);
